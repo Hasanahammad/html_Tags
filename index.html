@@ -1,471 +1,1514 @@
-
 <!DOCTYPE html>
-<html
-style="
-
-    text-align: center;
-    background: #72a4d0;
-
-">
-
+<html lang="en">
 <head>
-<title>
-HTML
-</title>
-<style>
-	  table 
-	  {
-		 border:1px solid purple;
-	  }
-	  td
-	  {
-		 border:1px solid purple;
-	  }	  
-	</style>
-	
-	</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Tags</title>
+  <meta name="description" content="A hands-on reference of HTML tags. Every tag has a plain explanation, a live example and the code behind it.">
+  <meta name="author" content="Hasan Ahammad">
+  <meta name="theme-color" content="#72a4d0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2372a4d0'/%3E%3Cpath d='M25 20 13 32l12 12M39 20l12 12-12 12' fill='none' stroke='%2312284a' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&amp;family=Martian+Mono:wdth,wght@75..112.5,300..700&amp;display=swap">
+  <style>
+    /* Colours come from the first version of this page (2017):
+       the steel-blue background #72a4d0 and the lavender table #b9a8fe. */
+    :root {
+      --mono: "Martian Mono", ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+      --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-	<body>
-	
-	  <h1 style="font-size: -webkit-xxx-large;color: black;font-family:italic;">HTML Tags<h1>
+      --sky: #72a4d0;
+      --sky-ink: #12284a;
+      --violet: #2e1f7a;
+      --lavender-soft: #ece7ff;
+      --bracket: #6347d6;
+      --paper: #eef3f9;
+      --surface: #ffffff;
+      --ink: #1d2b45;
+      --muted: #4f5d78;
+      --rule: #cfdbe9;
+      --field: #7f95b2;
+      --accent: #2d5b94;
+      --code-bg: #f3f6fb;
+      --focus: #6347d6;
+      color-scheme: light dark;
+    }
 
-	  <table style="width:100%;font-size:15px;background-color: #b9a8fe;">
-   	    <colgroup>
-        <col style="background-color:was";></col>
-		<col span="7" style="background-color:white";></col>
-		</colgroup>
-		<tr style="color:black;font-size:25px;font-family:fantasy;text-align:center;background-color:behind;">
-<td>serial</td>
-<td>Tags</td>
-<td>Description</td>
-<td>Example</td>
-</tr>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sky: #23466c;
+        --sky-ink: #eaf1fa;
+        --violet: #cbbcff;
+        --lavender-soft: #2a2552;
+        --bracket: #b9a8fe;
+        --paper: #0f1a2b;
+        --surface: #15233a;
+        --ink: #e3ebf6;
+        --muted: #a7b6cc;
+        --rule: #2a3c58;
+        --field: #5a7090;
+        --accent: #9cc4ec;
+        --code-bg: #0c1626;
+        --focus: #b9a8fe;
+      }
+    }
 
-<tr>
-<td>01</td>
-<td>html</td>
-<td>The root element</td>
-<td>All the codes are written inside this tag in html.</td>
-</tr>
-<tr>
-<td>02</td>
-<td>head</td>
-<td>Metadata</td>
-<td>The title of this page "Table for HTML tags" was written inside the head tag.</td>
-</tr><tr>
-<td>03</td>
-<td>title</td>
-<td>Metadata</td>
-<td>For example title of this page is 'Table for html tags'.</td>
-</tr><tr>
-<td>04</td>
-<td>base</td>
-<td>Metadata</td>
-<td>The title of this page "Table for HTML tags" was written inside the head tag.</td>
-</tr><tr>
-<td>05</td>
-<td>link</td>
-<td>Metadata</td>
-<td><a href="http://youtube.com/">Visit Youtube</a></td>
-</tr><tr>
-<td>06</td>
-<td>meta</td>
-<td>Metadata</td>
-<td>null</td>
-</tr><tr>
-<td>07</td>
-<td>style</td>
-<td>Metadata</td>
-<td style="color:red;">This sentence is red.</td>
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
 
-</tr><tr>
-<td>08</td>
-<td>body</td>
-<td>Sections</td>
-<td>the content of the documents</td>
-</tr><tr>
-<td>09</td>
-<td>article</td>
-<td>Sections</td>
-<td>uc browser
-uc browser is a free, open-source web browser developed by Google, released in 2008.</td>
-</tr><tr>
-<td>10</td>
-<td>section</td>
-<td>Sections</td>
-  <td>Defines sections in a document, such as chapters, headers, footers, or any other sections of the document.
-		
-			    <section>
-				    <h2 style="font-size:15px">Types of animals<h2>
-					<ul style="font-size:15px">
-					    <li>mammals</li>
-					    <li>birds</li>						
-					    <li>insects</li>						
-					    <li>fish</li>						
-					    <li>amphibians</li>						
-					</ul>
-				</section>
-			    <section>
-				    <h2 style="font-size:15px">Types of plants</h2>
-					<ul style="font-size:15px">
-					    <li>trees</li>
-					    <li>shrubs</li>						
-					    <li>water plants</li>						
-					    <li>herbs</li>						
-					    <li>climbers</li>						
-					</ul>
-				</section>				
-			</td>
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: 6rem; }
 
-</tr><tr>
-<td>11</td>
-<td>nav</td>
-<td>Sections</td>
-	<td>
-			    <nav>
-				    <a href="https://www.facebook.com/">facebook</a>|
-					<a href="https://www.twitter.com/">twitter</a>|
-					<a href="https://www.google.com/">google</a>
-				</nav>
-			</td>
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-</tr><tr>
-<td>12</td>
-<td>aside</td>
-<td>Sections</td>
-<td>Main article about me and my family.) My family and I visited The Epcot center this summer.
-Epcot Center
-The Epcot Center is a theme park in Disney World, Florida.</td>
-</tr><tr>
-<td>13</td>
-<td>h1 - h6</td>
-<td>Sections</td>
- <td>Used to define the heading of a content or a section. Can be written with 6 diferent sizes, H1 being the largest and H6 being the smallest.
-			
-			    <h1>Heading 1</h1>
-				<h2>Heading 2</h2>
-				<h3>Heading 3</h3>
-				<h4>Heading 4</h4>
-				<h5>Heading 5</h5>
-				<h6>Heading 6</h6>
-			</td>
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
-</tr><tr>
-<td>14</td>
-<td>header</td>
-<td>Sections</td>
-<td>
-			    <header>
-				    <h2>Hasan</h2>
-					<h3>Ahammad</h3>
-					Cool 
-				</header>
-			</td>
+    .wrap { max-width: 75rem; margin-inline: auto; padding-inline: 1.5rem; }
 
-</tr><tr>
-<td>15</td>
-<td>footer</td>
-<td>Sections</td>
-<td>
-			    It's
-			    <footer>
-				Hasan<br>
-				To contact click<a href="https://www.facebook.com/hasanahammad99">here</a>.
-				</footer>
-			</td>
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 20;
+      padding: .5rem 1rem;
+      background: var(--surface);
+      color: var(--accent);
+      border-radius: 6px;
+    }
+    .skip:focus { top: 1rem; }
 
-</tr><tr>
-<td>16</td>
-<td>address</td>
-<td>Sections</td>
-<td>
-			    <address>
-                <a href="https://www.Google.com/">Google</a>.<br> 
-           
-                </address>
-			</td>
+    /* Hero: the page title shown together with its own source tags */
+    .hero { background: var(--sky); color: var(--sky-ink); }
+    .hero .wrap { padding-block: 3.5rem 3rem; }
 
-</tr><tr>
-<td>17</td>
-<td>p</td>
-<td>Grouping</td>
-<td>paragraph Writing</td>
-</tr><tr>
-<td>18</td>
-<td>pre</td>
-<td>Grouping</td>
- <td> <pre>
-	None is none under the sun
-				</pre>
-				</td>
-</tr><tr>
-<td>19</td>
-<td>blockquote</td>
-<td>Grouping</td>
-<td>null</td>
-</tr><tr >
-<td>20</td>
-<td> ol</td>
-<td >Grouping</td>
-<td> 			<ol>
-				<li>book</li>
-				<li>pen</li>
-				<li>ice-cream</li>
-				</ol>
-</td>
-</tr><tr>
-<td>21</td>
-<td>ul</td>
-<td>Grouping</td>
-<td>null</td>
-</tr><tr>
-<td>22</td>
-<td>li</td>
-<td>Grouping</td>
-<td>
-			    <ul>
-				<li>car</li>
-				<li>gtx</li>
-				<li>cycle</li>
-				<li>mobile</li>
-				<li>mac</li>
-				</ul>
-			</td>
+    .title { margin: 0; font-weight: 700; }
 
-</tr><tr>
-<td>23</td>
-<td> dl</td>
-<td>Grouping</td>
-<td> <dl>
-				    <dt>hey</dt>
-					<dd>are you crazy ?</dd>
-					<dt>no!</dt>
-					
-				</dl>	</td>
-</tr><tr>
-<td>24</td>
-<td>dt</td>
-<td>Grouping</td>
-<td> <dt>look out</dt>
-<dd>be well</dd>
-<dt>do that</dt>
-<dd>at least</dd>
-<dt>for whatever</dt>
-</td>
-</tr><tr>
-<td>25</td>
-<td>dd</td>
-<td>Grouping</td>
-<td>same as dt</td>
-</tr><tr>
-<td>26</td>
-<td>figure</td>
-<td>Grouping</td>
-<td>
-			    <img src="a.jpg" width="200px" height="200px">
-			    <figcaption>Road</figcaption>
-			</td>
+    .src {
+      display: block;
+      font-family: var(--mono);
+      font-stretch: 80%;
+      font-weight: 400;
+      font-size: clamp(1.125rem, .9rem + 1vw, 1.5rem);
+      line-height: 1.2;
+      color: var(--violet);
+    }
 
-</tr><tr>
-<td>27</td>
-<td>figcaption</td>
-<td>Grouping</td>
-<td> <figure>
-				    <img src="b.jpg" width="500px" height="200px">
-					<figcaption>Iron man</figcaption>
-			    </figure>
-</td>
-</tr><tr>
-<td>28</td>
-<td>div</td>
-<td>Grouping</td>
-<td>null</td>
-</tr><tr>
-<td>29</td>
-<td>main</td>
-<td>Grouping</td>
-<td>null</td>
-</tr><tr>
-<td>30</td>
-<td> hr</td>
-<td>Grouping</td>
-<td>
-			    1<br>
-				2<br>
-				3<br>
-				<hr>
-				4<br>
-				5<br>
-				6<br>
-				<hr>
-				7<br>
-				8<br>
-				9<br>
-			</td>
+    .title-text {
+      display: block;
+      font-size: clamp(2.75rem, 1.6rem + 5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      margin-block: .12em .16em;
+      padding-inline-start: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    }
 
-</tr><tr>
-<td>31</td>
-<td>a</td>
-<td>Text</td>
-<td><a href="http://trickbd.com/">Visit trickbd!</a></td>
-</tr><tr>
-<td>32</td>
-<td> em</td>
-<td>Text</td>
-<td>My name is <em>Khan</em>.</td>
-</tr><tr>
-<td>33</td>
-<td>strong</td>
-<td>Text</td>
-<td>My name is <strong>Khan</strong>.</td>
-</tr><tr>
-<td>34</td>
-<td>cite</td>
-<td>Text</td>
-	<td>'None is none under the sun'-<cite>Hasan Ahammad</cite?</td>
-</tr><tr>
-<td>35</td>
-<td> q</td>
-<td>Text</td>
-<td> <q>None is none under the sun</q>- Hasan Ahammad
-</td>
-</tr><tr>
-<td>36</td>
-<td>dfn</td>
-<td>Text</td>
-<td><dfn>C++</dfn> is easy</td>
-</tr><tr>
-<td>37</td>
-<td>abbr</td>
-<td>Text</td>
-<td>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</td>
-</tr><tr>
-<td>38</td>
-<td> data</td>
-<td>Text</td>
-<td><data value="10">Pen</data> <br> Here,it is 10</td>
-</tr><tr>
-<td>39</td>
-<td>ins</td>
-<td>Edits</td>
-<td>i like <ins>blue</ins>.</td>
-</tr><tr>
-<td>40</td>
-<td>del</td>
-<td>Edits</td>
-<td>I like <del>Red</del> Blue.</td>
-</tr><tr>
-<td>41</td>
-<td>img</td>
-<td>Embedded Content</td>
-<td><img src="a.jpg" width="280px" height="350px">
-</td>
-</tr><tr>
-<td>42</td>
-<td> area</td>
-<td>Embedded Content</td>
-<td><textarea rows="10" cols="90">Describe your Self : </textarea>
-</td>
-</tr><tr>
-<td>43</td>
-<td>video</td>
-<td>Embedded Content</td>
-<td><video src = "Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) [Official Video].mp4"controls>
-Your browser doesn't support HTML. </video></td>
-</tr><tr>
-<td>44</td>
-<td>audio</td>
-<td>Embedded Content</td>
-<td><audio src = "Dure_Kothao.mp3" controls></audio></td>
-</tr><tr>
-<td>45</td>
-<td>table</td>
-<td>Tables</td>
-<td> <table style="border:1px solid red">
-   
-                        <tr style= "color:red;font-size:20px;">
-   
-                           <td style="border:1px solid red">A</td>
-                           <td style="border:1px solid red">B</td>
-                           <td style="border:1px solid red">C</td>
-                           <td style="border:1px solid red">D</td>
-                           <td style="border:1px solid red">E</td>
-                        </tr>
-   
-                        <tr>
-                           <td style="border:20px solid red">F</td>
-                           <td style="border:20px solid red">G</td>
-                           <td style="border:20px solid red">H</td>
-                           <td style="border:20px solid red">I</td>
-                           <td style="border:20px solid red">J</td>
-                        </tr>
-   
-                    </table>
-</td>
-</tr><tr>
-<td>46</td>
-<td> tr</td>
-<td>Tables</td>
-<td>tables rows</td>
-</tr><tr>
-<td>47</td>
-<td>td</td>
-<td>Tables</td>
-<td>tables data</td>
-</tr><tr>
-<td>48</td>
-<td>caption</td>
-<td>Tables</td>
-<td>  <table>
-                    <caption>income</caption>
-                    <tr>
-                        <th style="border:solid 1px black">Month</th>
-                        <th style="border:solid 1px black">income</th>
-                    </tr>
-                    <tr>
-                        <td style="border:solid 1px black">January</td>
-                        <td style="border:solid 1px black">10tk.</td>
-                    </tr>
-					<tr>
-                        <td style="border:solid 1px black">february</td>
-                        <td style="border:solid 1px black">10tk.</td>
-                    </tr>
-                </table>
-</td>
-</tr><tr>
-<td>49</td>
-<td>Forms</td>
-<td>Forms</td>
-<td><form> 
-First Name :<br>
-<input type="text"><br>
-Last Name:<br>
-<input type="text"><br>
-</form></td>
-</tr><tr>
-<td>50</td>
-<td>script</td>
-<td>Scripting</td>
-<td><script type="text/javascript">
-alert ('javascript rocking yo world sun !');
+    .lede {
+      margin: 1.5rem 0 0;
+      max-width: 36rem;
+      font-size: 1.3125rem;
+      line-height: 1.45;
+    }
 
+    @media (prefers-reduced-motion: no-preference) {
+      .src { animation: src-in .6s cubic-bezier(.2, .7, .2, 1) both; }
+      .src-close { animation-delay: .15s; }
+      @keyframes src-in {
+        from { opacity: 0; transform: translateX(-.75rem); }
+      }
+    }
 
+    /* Search and filter bar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+    }
 
+    .toolbar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: .75rem 1rem;
+      padding-block: .75rem;
+    }
 
-</script></td>
-</tr><tr>
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      font-size: .875rem;
+      color: var(--muted);
+    }
 
-</table>
-<p style="
-    text-align: center;
-    font-size: 50px;
-">
-Thanks !
-</p>
-	<p style="text-align: end;">
-    powered by Hasan Ahammad
-</p>
+    .field-search { flex: 1 1 16rem; max-width: 28rem; }
 
+    .field input,
+    .field select {
+      font: inherit;
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--field);
+      border-radius: 6px;
+      padding: .5rem .75rem;
+      min-height: 2.75rem;
+    }
+
+    .field input { width: 100%; }
+
+    .count {
+      margin: 0 0 .75rem auto;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    /* The tag table */
+    .tags {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin-block: 1rem 3rem;
+    }
+
+    .tags > thead > tr > th {
+      text-align: left;
+      font-size: .875rem;
+      font-weight: 400;
+      color: var(--muted);
+      padding: .75rem .75rem .5rem;
+    }
+
+    .tags > thead > tr > th:first-child { width: 11rem; }
+    .tags > thead > tr > th:nth-child(2) { width: 32%; }
+
+    .tags > tbody > .group-row > th {
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      padding: 2.25rem .75rem .5rem;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .group-count {
+      margin-inline-start: .5rem;
+      font-size: .875rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .tags > tbody > tr:not(.group-row) > th,
+    .tags > tbody > tr:not(.group-row) > td {
+      padding: 1.25rem .75rem;
+      border-bottom: 1px solid var(--rule);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tags > tbody > tr > th[scope="row"] { font-weight: 400; }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-stretch: 80%;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      white-space: nowrap;
+      color: var(--ink);
+      background: var(--lavender-soft);
+      padding: .1rem .45rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .tag:hover { text-decoration: underline; }
+    .tag .b { color: var(--bracket); }
+
+    .desc { max-width: 34rem; }
+
+    .desc code,
+    .note code {
+      font-family: var(--mono);
+      font-stretch: 80%;
+      font-size: .875em;
+    }
+
+    .desc a,
+    .note a,
+    .site-footer a { color: var(--accent); }
+
+    .ex { min-width: 0; }
+
+    .note {
+      margin: 0 0 .5rem;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    /* Live examples use the browser's own default styles, like a fresh page */
+    .demo {
+      background: #fff;
+      color: #000;
+      color-scheme: light;
+      font-family: serif;
+      font-size: 16px;
+      line-height: normal;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: .75rem 1rem;
+      overflow-x: auto;
+    }
+    .snippet + .demo { margin-top: .5rem; }
+    .demo > :first-child,
+    .demo > :first-child > :first-child { margin-top: 0; }
+    .demo > :last-child,
+    .demo > :last-child > :last-child { margin-bottom: 0; }
+
+    .demo img,
+    .demo video,
+    .demo canvas,
+    .demo svg { max-width: 100%; height: auto; }
+
+    .demo iframe,
+    .demo textarea { max-width: 100%; }
+
+    .red-text { color: crimson; }
+
+    .boxed { border-collapse: collapse; }
+    .boxed th,
+    .boxed td { border: 1px solid #555; padding: 4px 10px; }
+
+    .ex-tools {
+      display: flex;
+      gap: .5rem;
+      margin-top: .5rem;
+    }
+
+    .btn {
+      font: inherit;
+      font-size: .875rem;
+      line-height: 1.2;
+      padding: .45rem .8rem;
+      min-height: 2.25rem;
+      color: var(--accent);
+      background: var(--surface);
+      border: 1px solid var(--field);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn[aria-expanded="true"] { color: var(--ink); background: var(--lavender-soft); }
+
+    .code,
+    .snippet {
+      margin: .5rem 0 0;
+      padding: .75rem 1rem;
+      overflow-x: auto;
+      background: var(--code-bg);
+      color: var(--ink);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-stretch: 80%;
+      font-size: .875rem;
+      line-height: 1.6;
+      tab-size: 2;
+    }
+    .snippet { margin-top: 0; }
+    .code code,
+    .snippet code { font: inherit; }
+
+    .empty {
+      margin: 0 0 4rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .875rem;
+    }
+    .site-footer .wrap { padding-block: 2rem 3rem; }
+    .site-footer p { margin: 0 0 .5rem; }
+
+    /* Phones: each tag becomes a stacked block */
+    @media (max-width: 45rem) {
+      .wrap { padding-inline: 1rem; }
+      .hero .wrap { padding-block: 2.5rem 2rem; }
+
+      .tags > thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+
+      .tags,
+      .tags > tbody,
+      .tags > tbody > tr,
+      .tags > tbody > tr > th,
+      .tags > tbody > tr > td { display: block; width: 100%; }
+
+      .tags > tbody > .group-row > th { padding: 2rem 0 .5rem; }
+
+      .tags > tbody > tr:not(.group-row) {
+        padding-block: 1.25rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .tags > tbody > tr:not(.group-row) > th,
+      .tags > tbody > tr:not(.group-row) > td { padding: 0; border: 0; }
+
+      .tags > tbody > tr > .desc { margin-block: .5rem .75rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#tags">Skip to the tag list</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="title">
+        <span class="src src-open" aria-hidden="true">&lt;h1&gt;</span>
+        <span class="title-text">HTML Tags</span>
+        <span class="src src-close" aria-hidden="true">&lt;/h1&gt;</span>
+      </h1>
+      <p class="lede">A hands-on list of HTML tags. Each one comes with a plain explanation, a live example drawn by your browser, and the code behind it.</p>
+    </div>
+  </header>
+
+  <div class="toolbar" role="search">
+    <div class="wrap toolbar-inner">
+      <label class="field field-search">
+        Search
+        <input id="q" type="search" placeholder="img, table, form… (press /)" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="field">
+        Group
+        <select id="group">
+          <option value="">All groups</option>
+        </select>
+      </label>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <main id="tags" class="wrap">
+    <table class="tags">
+      <thead>
+        <tr>
+          <th scope="col">Tag</th>
+          <th scope="col">What it does</th>
+          <th scope="col">Example</th>
+        </tr>
+      </thead>
+
+      <!-- ============ Page structure ============ -->
+      <tbody id="page-structure" data-group="Page structure">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Page structure <span class="group-count"></span></th></tr>
+
+        <tr id="tag-html" data-k="root document page">
+          <th scope="row"><a class="tag" href="#tag-html"><span class="b">&lt;</span>html<span class="b">&gt;</span></a></th>
+          <td class="desc">The root of the page. Every other tag goes inside it. The <code>lang</code> attribute tells browsers and screen readers which language the page is in.</td>
+          <td class="ex">
+            <pre class="snippet"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;…&lt;/head&gt;
+  &lt;body&gt;…&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-head" data-k="metadata information">
+          <th scope="row"><a class="tag" href="#tag-head"><span class="b">&lt;</span>head<span class="b">&gt;</span></a></th>
+          <td class="desc">Holds information about the page that is not shown on it: the title, meta tags, styles and links to other files.</td>
+          <td class="ex">
+            <pre class="snippet"><code>&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;HTML Tags&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-body" data-k="content visible">
+          <th scope="row"><a class="tag" href="#tag-body"><span class="b">&lt;</span>body<span class="b">&gt;</span></a></th>
+          <td class="desc">Holds everything you see on the page: text, images, tables, forms and more.</td>
+          <td class="ex">
+            <p class="note">Everything on this page, including this table, is inside the body.</p>
+            <pre class="snippet"><code>&lt;body&gt;
+  &lt;h1&gt;Hello!&lt;/h1&gt;
+  &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-main" data-k="main content">
+          <th scope="row"><a class="tag" href="#tag-main"><span class="b">&lt;</span>main<span class="b">&gt;</span></a></th>
+          <td class="desc">Wraps the main content of the page, the part that is unique to it. Use only one main per page.</td>
+          <td class="ex">
+            <p class="note">On this page, the tag table sits inside main.</p>
+            <pre class="snippet"><code>&lt;main&gt;
+  &lt;h1&gt;HTML Tags&lt;/h1&gt;
+  &lt;p&gt;The list of tags goes here.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Metadata ============ -->
+      <tbody id="metadata" data-group="Metadata">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Metadata <span class="group-count"></span></th></tr>
+
+        <tr id="tag-title" data-k="tab name browser">
+          <th scope="row"><a class="tag" href="#tag-title"><span class="b">&lt;</span>title<span class="b">&gt;</span></a></th>
+          <td class="desc">Sets the name shown on the browser tab, in bookmarks and in search results.</td>
+          <td class="ex">
+            <p class="note">Look at your browser tab: it says “HTML Tags”.</p>
+            <pre class="snippet"><code>&lt;title&gt;HTML Tags&lt;/title&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-base" data-k="url relative links">
+          <th scope="row"><a class="tag" href="#tag-base"><span class="b">&lt;</span>base<span class="b">&gt;</span></a></th>
+          <td class="desc">Sets the starting address for every relative link on the page. Only one base is allowed, inside head.</td>
+          <td class="ex">
+            <p class="note">With this base, a link to <code>about.html</code> opens https://example.com/docs/about.html. This page doesn't use base, so the example is code only.</p>
+            <pre class="snippet"><code>&lt;base href="https://example.com/docs/"&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-link" data-k="stylesheet css font external">
+          <th scope="row"><a class="tag" href="#tag-link"><span class="b">&lt;</span>link<span class="b">&gt;</span></a></th>
+          <td class="desc">Connects the page to an outside file, most often a stylesheet or a font. For clickable links, use the <a href="#tag-a">a</a> tag.</td>
+          <td class="ex">
+            <p class="note">This page uses link to load its fonts from Google Fonts.</p>
+            <pre class="snippet"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-meta" data-k="charset viewport seo description">
+          <th scope="row"><a class="tag" href="#tag-meta"><span class="b">&lt;</span>meta<span class="b">&gt;</span></a></th>
+          <td class="desc">Gives browsers and search engines extra facts about the page, such as its character set, its description, and how it should scale on phones.</td>
+          <td class="ex">
+            <pre class="snippet"><code>&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta name="description" content="A list of HTML tags"&gt;</code></pre>
+          </td>
+        </tr>
+
+        <tr id="tag-style" data-k="css design colour color">
+          <th scope="row"><a class="tag" href="#tag-style"><span class="b">&lt;</span>style<span class="b">&gt;</span></a></th>
+          <td class="desc">Holds CSS rules that style the page. It usually goes inside head.</td>
+          <td class="ex">
+            <pre class="snippet"><code>&lt;style&gt;
+  .red-text { color: crimson; }
+&lt;/style&gt;</code></pre>
+            <div class="demo">
+              <p class="red-text">This sentence is red.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Sections ============ -->
+      <tbody id="sections" data-group="Sections">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Sections <span class="group-count"></span></th></tr>
+
+        <tr id="tag-header" data-k="top banner logo">
+          <th scope="row"><a class="tag" href="#tag-header"><span class="b">&lt;</span>header<span class="b">&gt;</span></a></th>
+          <td class="desc">The top part of a page or section, usually with a logo, a title or navigation.</td>
+          <td class="ex">
+            <div class="demo">
+              <header>
+                <h3>Hasan Ahammad</h3>
+                <p>Software engineer from Dhaka</p>
+              </header>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-nav" data-k="navigation menu links">
+          <th scope="row"><a class="tag" href="#tag-nav"><span class="b">&lt;</span>nav<span class="b">&gt;</span></a></th>
+          <td class="desc">A group of the main navigation links on a page. These links jump to other parts of this page.</td>
+          <td class="ex">
+            <div class="demo">
+              <nav>
+                <a href="#metadata">Metadata</a> |
+                <a href="#text">Text</a> |
+                <a href="#forms">Forms</a>
+              </nav>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-section" data-k="part chapter">
+          <th scope="row"><a class="tag" href="#tag-section"><span class="b">&lt;</span>section<span class="b">&gt;</span></a></th>
+          <td class="desc">A themed part of a page, like a chapter. A section usually has its own heading.</td>
+          <td class="ex">
+            <div class="demo">
+              <section>
+                <h4>Types of animals</h4>
+                <ul>
+                  <li>Mammals</li>
+                  <li>Birds</li>
+                  <li>Fish</li>
+                </ul>
+              </section>
+              <section>
+                <h4>Types of plants</h4>
+                <ul>
+                  <li>Trees</li>
+                  <li>Shrubs</li>
+                  <li>Herbs</li>
+                </ul>
+              </section>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-article" data-k="post story blog news">
+          <th scope="row"><a class="tag" href="#tag-article"><span class="b">&lt;</span>article<span class="b">&gt;</span></a></th>
+          <td class="desc">A complete piece that makes sense on its own, like a blog post, a news story or a comment.</td>
+          <td class="ex">
+            <div class="demo">
+              <article>
+                <h4>Google Chrome</h4>
+                <p>Google Chrome is a web browser made by Google. Its first version came out in 2008.</p>
+              </article>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-aside" data-k="sidebar side note">
+          <th scope="row"><a class="tag" href="#tag-aside"><span class="b">&lt;</span>aside<span class="b">&gt;</span></a></th>
+          <td class="desc">Content related to the main text but separate from it, like a side note or a fact box.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Many tourists visit Cox's Bazar every winter.</p>
+              <aside style="border-left: 4px solid #72a4d0; padding-left: 10px;">
+                <h4>Did you know?</h4>
+                <p>Cox's Bazar has one of the longest natural sea beaches in the world.</p>
+              </aside>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-footer" data-k="bottom copyright">
+          <th scope="row"><a class="tag" href="#tag-footer"><span class="b">&lt;</span>footer<span class="b">&gt;</span></a></th>
+          <td class="desc">The bottom part of a page or section, often with the author, copyright or contact links.</td>
+          <td class="ex">
+            <div class="demo">
+              <footer>
+                <p>Written by Hasan Ahammad</p>
+                <p><a href="https://github.com/Hasanahammad">github.com/Hasanahammad</a></p>
+              </footer>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-address" data-k="contact">
+          <th scope="row"><a class="tag" href="#tag-address"><span class="b">&lt;</span>address<span class="b">&gt;</span></a></th>
+          <td class="desc">Contact details for the person or organization behind a page or article. Browsers show it in italics.</td>
+          <td class="ex">
+            <div class="demo">
+              <address>
+                Hasan Ahammad<br>
+                Dhaka, Bangladesh<br>
+                <a href="https://github.com/Hasanahammad">github.com/Hasanahammad</a>
+              </address>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-h1-h6" data-k="h1 h2 h3 h4 h5 h6 heading title">
+          <th scope="row"><a class="tag" href="#tag-h1-h6"><span class="b">&lt;</span>h1<span class="b">&gt;</span>–<span class="b">&lt;</span>h6<span class="b">&gt;</span></a></th>
+          <td class="desc">Six levels of headings. h1 is the most important and h6 the least. Use them in order, like the chapters and sub-chapters of a book.</td>
+          <td class="ex">
+            <div class="demo">
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Grouping content ============ -->
+      <tbody id="grouping" data-group="Grouping content">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Grouping content <span class="group-count"></span></th></tr>
+
+        <tr id="tag-p" data-k="paragraph text">
+          <th scope="row"><a class="tag" href="#tag-p"><span class="b">&lt;</span>p<span class="b">&gt;</span></a></th>
+          <td class="desc">A paragraph of text. Browsers add space above and below it.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>This is the first paragraph.</p>
+              <p>This is the second one. Notice the gap between them.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-pre" data-k="preformatted spaces monospace">
+          <th scope="row"><a class="tag" href="#tag-pre"><span class="b">&lt;</span>pre<span class="b">&gt;</span></a></th>
+          <td class="desc">Preformatted text. Spaces and line breaks are kept exactly as typed, in a monospace font.</td>
+          <td class="ex">
+            <div class="demo">
+<pre>None   is   none
+     under   the   sun</pre>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-blockquote" data-k="quote quotation">
+          <th scope="row"><a class="tag" href="#tag-blockquote"><span class="b">&lt;</span>blockquote<span class="b">&gt;</span></a></th>
+          <td class="desc">A longer quotation from someone else, shown indented by default.</td>
+          <td class="ex">
+            <div class="demo">
+              <blockquote>
+                <p>None is none under the sun.</p>
+              </blockquote>
+              <p>— Hasan Ahammad</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-ol" data-k="ordered list numbered steps">
+          <th scope="row"><a class="tag" href="#tag-ol"><span class="b">&lt;</span>ol<span class="b">&gt;</span></a></th>
+          <td class="desc">A numbered list. Use it when the order matters, like steps in a recipe.</td>
+          <td class="ex">
+            <div class="demo">
+              <ol>
+                <li>Boil the water</li>
+                <li>Add the tea leaves</li>
+                <li>Pour and enjoy</li>
+              </ol>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-ul" data-k="unordered list bullets">
+          <th scope="row"><a class="tag" href="#tag-ul"><span class="b">&lt;</span>ul<span class="b">&gt;</span></a></th>
+          <td class="desc">A bulleted list, for items where the order doesn't matter.</td>
+          <td class="ex">
+            <div class="demo">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-li" data-k="list item">
+          <th scope="row"><a class="tag" href="#tag-li"><span class="b">&lt;</span>li<span class="b">&gt;</span></a></th>
+          <td class="desc">One item in a list. It goes inside an ol or a ul.</td>
+          <td class="ex">
+            <div class="demo">
+              <ul>
+                <li>Car</li>
+                <li>Cycle</li>
+                <li>Mobile</li>
+                <li>Laptop</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-dl" data-k="description list glossary">
+          <th scope="row"><a class="tag" href="#tag-dl"><span class="b">&lt;</span>dl<span class="b">&gt;</span></a></th>
+          <td class="desc">A description list: pairs of terms and their descriptions, like a glossary.</td>
+          <td class="ex">
+            <div class="demo">
+              <dl>
+                <dt>HTML</dt>
+                <dd>Gives a page its structure.</dd>
+                <dt>CSS</dt>
+                <dd>Controls how the page looks.</dd>
+                <dt>JavaScript</dt>
+                <dd>Makes the page interactive.</dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-dt" data-k="description term">
+          <th scope="row"><a class="tag" href="#tag-dt"><span class="b">&lt;</span>dt<span class="b">&gt;</span></a></th>
+          <td class="desc">The term in a description list. It goes inside a dl.</td>
+          <td class="ex">
+            <div class="demo">
+              <dl>
+                <dt>Dhaka</dt>
+                <dd>The capital of Bangladesh.</dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-dd" data-k="description details">
+          <th scope="row"><a class="tag" href="#tag-dd"><span class="b">&lt;</span>dd<span class="b">&gt;</span></a></th>
+          <td class="desc">The description of the term above it. Browsers indent it.</td>
+          <td class="ex">
+            <div class="demo">
+              <dl>
+                <dt>Padma Bridge</dt>
+                <dd>A road and rail bridge over the Padma River, opened in 2022.</dd>
+              </dl>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-figure" data-k="image photo caption">
+          <th scope="row"><a class="tag" href="#tag-figure"><span class="b">&lt;</span>figure<span class="b">&gt;</span></a></th>
+          <td class="desc">A self-contained item like a photo, a chart or a code sample, usually with a caption.</td>
+          <td class="ex">
+            <div class="demo">
+              <figure>
+                <img src="a.jpg" alt="A quiet street at night lit by a street light" width="240" height="240">
+                <figcaption>Road at night</figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-figcaption" data-k="caption figure">
+          <th scope="row"><a class="tag" href="#tag-figcaption"><span class="b">&lt;</span>figcaption<span class="b">&gt;</span></a></th>
+          <td class="desc">The caption of a figure. It goes first or last inside the figure.</td>
+          <td class="ex">
+            <div class="demo">
+              <figure>
+                <img src="b.jpg" alt="Iron Man kneeling in the sea" width="320" height="136">
+                <figcaption>Iron Man</figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-div" data-k="division container box layout">
+          <th scope="row"><a class="tag" href="#tag-div"><span class="b">&lt;</span>div<span class="b">&gt;</span></a></th>
+          <td class="desc">A plain box with no meaning of its own. It groups things together so you can style or arrange them.</td>
+          <td class="ex">
+            <div class="demo">
+              <div style="padding: 12px; border: 2px dashed #72a4d0;">
+                I am a div. The dashed border comes from its style attribute.
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-hr" data-k="horizontal rule line break divider">
+          <th scope="row"><a class="tag" href="#tag-hr"><span class="b">&lt;</span>hr<span class="b">&gt;</span></a></th>
+          <td class="desc">A thematic break: a line that separates one topic from the next.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Chapter 1 ends here.</p>
+              <hr>
+              <p>Chapter 2 starts here.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Text ============ -->
+      <tbody id="text" data-group="Text">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Text <span class="group-count"></span></th></tr>
+
+        <tr id="tag-a" data-k="anchor link hyperlink href">
+          <th scope="row"><a class="tag" href="#tag-a"><span class="b">&lt;</span>a<span class="b">&gt;</span></a></th>
+          <td class="desc">A link to another page, a file, an email address or a spot on the same page.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">Visit MDN Web Docs</a></p>
+              <p><a href="#tag-img">Jump to the img tag</a></p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-em" data-k="emphasis italic">
+          <th scope="row"><a class="tag" href="#tag-em"><span class="b">&lt;</span>em<span class="b">&gt;</span></a></th>
+          <td class="desc">Stress emphasis, the way you would say a word louder. Shown in italics by default.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>I <em>really</em> like HTML.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-strong" data-k="bold important">
+          <th scope="row"><a class="tag" href="#tag-strong"><span class="b">&lt;</span>strong<span class="b">&gt;</span></a></th>
+          <td class="desc">Text of strong importance, like a warning. Shown in bold by default.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><strong>Warning:</strong> the water is hot.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-cite" data-k="citation book title work">
+          <th scope="row"><a class="tag" href="#tag-cite"><span class="b">&lt;</span>cite<span class="b">&gt;</span></a></th>
+          <td class="desc">The title of a creative work, such as a book, a film or a song. Shown in italics.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><cite>Clean Code</cite> is a book by Robert C. Martin.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-q" data-k="inline quote quotation marks">
+          <th scope="row"><a class="tag" href="#tag-q"><span class="b">&lt;</span>q<span class="b">&gt;</span></a></th>
+          <td class="desc">A short quotation inside a sentence. The browser adds the quote marks for you.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><q>None is none under the sun</q>, says Hasan Ahammad.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-dfn" data-k="definition term">
+          <th scope="row"><a class="tag" href="#tag-dfn"><span class="b">&lt;</span>dfn<span class="b">&gt;</span></a></th>
+          <td class="desc">Marks the term that the sentence defines.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><dfn>HTML</dfn> is the standard language for structuring web pages.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-abbr" data-k="abbreviation acronym tooltip">
+          <th scope="row"><a class="tag" href="#tag-abbr"><span class="b">&lt;</span>abbr<span class="b">&gt;</span></a></th>
+          <td class="desc">An abbreviation. The title attribute holds the full form, which appears when you hover over it.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-data" data-k="value machine readable">
+          <th scope="row"><a class="tag" href="#tag-data"><span class="b">&lt;</span>data<span class="b">&gt;</span></a></th>
+          <td class="desc">Pairs visible text with a machine-readable value. People see “Pen”; programs read the value 10.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Product: <data value="10">Pen</data></p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-span" data-k="inline container style">
+          <th scope="row"><a class="tag" href="#tag-span"><span class="b">&lt;</span>span<span class="b">&gt;</span></a></th>
+          <td class="desc">A plain inline container with no meaning of its own, often used to style a few words.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>My favourite colour is <span style="color: #2d5b94; font-weight: bold;">blue</span>.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-br" data-k="line break new line">
+          <th scope="row"><a class="tag" href="#tag-br"><span class="b">&lt;</span>br<span class="b">&gt;</span></a></th>
+          <td class="desc">A line break inside text. Useful for addresses and poems, not for adding space.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Hasan Ahammad<br>Dhaka<br>Bangladesh</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-mark" data-k="highlight marker">
+          <th scope="row"><a class="tag" href="#tag-mark"><span class="b">&lt;</span>mark<span class="b">&gt;</span></a></th>
+          <td class="desc">Highlighted text, like a marker pen on paper.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Search results for <mark>HTML</mark> are highlighted.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-code" data-k="computer code monospace">
+          <th scope="row"><a class="tag" href="#tag-code"><span class="b">&lt;</span>code<span class="b">&gt;</span></a></th>
+          <td class="desc">A short piece of computer code inside text, shown in a monospace font.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Use the <code>&lt;img&gt;</code> tag to add a picture.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-kbd" data-k="keyboard key shortcut">
+          <th scope="row"><a class="tag" href="#tag-kbd"><span class="b">&lt;</span>kbd<span class="b">&gt;</span></a></th>
+          <td class="desc">Keyboard input, like a key or a shortcut.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Edits ============ -->
+      <tbody id="edits" data-group="Edits">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Edits <span class="group-count"></span></th></tr>
+
+        <tr id="tag-ins" data-k="inserted added underline">
+          <th scope="row"><a class="tag" href="#tag-ins"><span class="b">&lt;</span>ins<span class="b">&gt;</span></a></th>
+          <td class="desc">Text that was added to a document. Underlined by default.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>I like <ins>blue</ins>.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-del" data-k="deleted removed strikethrough">
+          <th scope="row"><a class="tag" href="#tag-del"><span class="b">&lt;</span>del<span class="b">&gt;</span></a></th>
+          <td class="desc">Text that was removed from a document. Shown with a line through it.</td>
+          <td class="ex">
+            <div class="demo">
+              <p>I like <del>red</del> <ins>blue</ins>.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Images and media ============ -->
+      <tbody id="media" data-group="Images and media">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Images and media <span class="group-count"></span></th></tr>
+
+        <tr id="tag-img" data-k="image picture photo alt">
+          <th scope="row"><a class="tag" href="#tag-img"><span class="b">&lt;</span>img<span class="b">&gt;</span></a></th>
+          <td class="desc">Adds an image. The alt text describes it for people who can't see it, and shows if the image fails to load.</td>
+          <td class="ex">
+            <div class="demo">
+              <img src="a.jpg" alt="A quiet street at night lit by a street light" width="240" height="240">
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-area" data-k="map image map clickable region usemap">
+          <th scope="row"><a class="tag" href="#tag-area"><span class="b">&lt;</span>area<span class="b">&gt;</span></a></th>
+          <td class="desc">A clickable region inside an image map. It goes inside a map, which is linked to an img with the usemap attribute.</td>
+          <td class="ex">
+            <div class="demo">
+              <img src="a.jpg" alt="A street at night" width="240" height="240" usemap="#street-map">
+              <map name="street-map">
+                <area shape="circle" coords="118,128,18" href="a.jpg" alt="Street light: open the full photo">
+                <area shape="rect" coords="30,162,54,206" href="#tag-figure" alt="Person: jump to the figure tag">
+              </map>
+              <p>Click the street light to open the full photo, or the person to jump to the figure tag.</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-video" data-k="movie mp4 player">
+          <th scope="row"><a class="tag" href="#tag-video"><span class="b">&lt;</span>video<span class="b">&gt;</span></a></th>
+          <td class="desc">Plays a video. The controls attribute adds play, pause and volume buttons.</td>
+          <td class="ex">
+            <div class="demo">
+              <video controls preload="metadata" width="320">
+                <source src="Charlie%20Puth%20-%20We%20Don't%20Talk%20Anymore%20(feat.%20Selena%20Gomez)%20%5BOfficial%20Video%5D.mp4" type="video/mp4">
+                Your browser cannot play this video.
+              </video>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-audio" data-k="sound music mp3 song">
+          <th scope="row"><a class="tag" href="#tag-audio"><span class="b">&lt;</span>audio<span class="b">&gt;</span></a></th>
+          <td class="desc">Plays a sound file, like a song or a podcast.</td>
+          <td class="ex">
+            <div class="demo">
+              <audio controls preload="none" src="Dure_Kothao.mp3">
+                Your browser cannot play this audio.
+              </audio>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-iframe" data-k="embed frame map youtube">
+          <th scope="row"><a class="tag" href="#tag-iframe"><span class="b">&lt;</span>iframe<span class="b">&gt;</span></a></th>
+          <td class="desc">Shows another web page inside this one, like a map or a video player.</td>
+          <td class="ex">
+            <div class="demo">
+              <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=90.35%2C23.70%2C90.46%2C23.82&amp;layer=mapnik" width="320" height="200" title="Map of Dhaka" loading="lazy"></iframe>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-svg" data-k="vector graphics shapes drawing">
+          <th scope="row"><a class="tag" href="#tag-svg"><span class="b">&lt;</span>svg<span class="b">&gt;</span></a></th>
+          <td class="desc">Draws vector graphics: shapes and text that stay sharp at any size.</td>
+          <td class="ex">
+            <div class="demo">
+              <svg width="240" height="120" viewBox="0 0 240 120" role="img" aria-label="A lavender circle next to the word SVG">
+                <circle cx="60" cy="60" r="44" fill="#b9a8fe" />
+                <text x="122" y="72" font-size="32" font-family="sans-serif" fill="#1d2b45">SVG</text>
+              </svg>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Tables ============ -->
+      <tbody id="tables" data-group="Tables">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Tables <span class="group-count"></span></th></tr>
+
+        <tr id="tag-table" data-k="grid rows columns data">
+          <th scope="row"><a class="tag" href="#tag-table"><span class="b">&lt;</span>table<span class="b">&gt;</span></a></th>
+          <td class="desc">Shows data in rows and columns. A table is built from tr rows, which hold th and td cells.</td>
+          <td class="ex">
+            <div class="demo">
+              <!-- The borders come from the CSS class "boxed" -->
+              <table class="boxed">
+                <tbody>
+                  <tr><td>A</td><td>B</td><td>C</td></tr>
+                  <tr><td>D</td><td>E</td><td>F</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-caption" data-k="table title">
+          <th scope="row"><a class="tag" href="#tag-caption"><span class="b">&lt;</span>caption<span class="b">&gt;</span></a></th>
+          <td class="desc">The title of a table. It goes right after the opening table tag.</td>
+          <td class="ex">
+            <div class="demo">
+              <table class="boxed">
+                <caption>My income</caption>
+                <tbody>
+                  <tr><th scope="col">Month</th><th scope="col">Income</th></tr>
+                  <tr><td>January</td><td>10 tk</td></tr>
+                  <tr><td>February</td><td>10 tk</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-tr" data-k="table row">
+          <th scope="row"><a class="tag" href="#tag-tr"><span class="b">&lt;</span>tr<span class="b">&gt;</span></a></th>
+          <td class="desc">One row in a table. Each tr holds th or td cells.</td>
+          <td class="ex">
+            <div class="demo">
+              <table class="boxed">
+                <tbody>
+                  <tr><td>Row 1, cell 1</td><td>Row 1, cell 2</td></tr>
+                  <tr><td>Row 2, cell 1</td><td>Row 2, cell 2</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-th" data-k="table header cell">
+          <th scope="row"><a class="tag" href="#tag-th"><span class="b">&lt;</span>th<span class="b">&gt;</span></a></th>
+          <td class="desc">A header cell that labels a column or row. Bold and centred by default.</td>
+          <td class="ex">
+            <div class="demo">
+              <table class="boxed">
+                <tbody>
+                  <tr><th scope="col">Name</th><th scope="col">City</th></tr>
+                  <tr><td>Hasan</td><td>Dhaka</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-td" data-k="table data cell">
+          <th scope="row"><a class="tag" href="#tag-td"><span class="b">&lt;</span>td<span class="b">&gt;</span></a></th>
+          <td class="desc">A regular data cell in a table.</td>
+          <td class="ex">
+            <div class="demo">
+              <table class="boxed">
+                <tbody>
+                  <tr><td>Mango</td><td>Rajshahi</td></tr>
+                  <tr><td>Hilsa</td><td>Chandpur</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Forms ============ -->
+      <tbody id="forms" data-group="Forms">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Forms <span class="group-count"></span></th></tr>
+
+        <tr id="tag-form" data-k="input submit send">
+          <th scope="row"><a class="tag" href="#tag-form"><span class="b">&lt;</span>form<span class="b">&gt;</span></a></th>
+          <td class="desc">Collects input from the visitor and sends it somewhere. This demo doesn't send anything.</td>
+          <td class="ex">
+            <div class="demo">
+              <form>
+                <label for="first-name">First name</label><br>
+                <input id="first-name" name="first" type="text"><br>
+                <label for="last-name">Last name</label><br>
+                <input id="last-name" name="last" type="text"><br><br>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-label" data-k="caption input checkbox">
+          <th scope="row"><a class="tag" href="#tag-label"><span class="b">&lt;</span>label<span class="b">&gt;</span></a></th>
+          <td class="desc">Names a form control. Clicking the label also clicks its control, which is easier on phones.</td>
+          <td class="ex">
+            <div class="demo">
+              <input type="checkbox" id="agree">
+              <label for="agree">I like HTML (click this text)</label>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-input" data-k="text email number range color date radio checkbox field">
+          <th scope="row"><a class="tag" href="#tag-input"><span class="b">&lt;</span>input<span class="b">&gt;</span></a></th>
+          <td class="desc">A form field. The type attribute turns it into a text box, a slider, a colour picker, a date picker and more.</td>
+          <td class="ex">
+            <div class="demo">
+              <p><input type="text" placeholder="Your name" aria-label="Your name"></p>
+              <p><input type="email" placeholder="you@example.com" aria-label="Email"></p>
+              <p><input type="range" min="0" max="100" value="40" aria-label="Volume"></p>
+              <p><input type="color" value="#72a4d0" aria-label="Colour"> <input type="date" aria-label="Date"></p>
+              <p>
+                <input type="radio" name="drink" id="drink-tea" checked> <label for="drink-tea">Tea</label>
+                <input type="radio" name="drink" id="drink-coffee"> <label for="drink-coffee">Coffee</label>
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-button" data-k="click submit">
+          <th scope="row"><a class="tag" href="#tag-button"><span class="b">&lt;</span>button<span class="b">&gt;</span></a></th>
+          <td class="desc">A clickable button. Inside a form it sends the form, unless you set type="button".</td>
+          <td class="ex">
+            <div class="demo">
+              <button type="button" onclick="this.textContent = 'Clicked!'">Click me</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-select" data-k="dropdown option choose">
+          <th scope="row"><a class="tag" href="#tag-select"><span class="b">&lt;</span>select<span class="b">&gt;</span></a></th>
+          <td class="desc">A drop-down list. Each choice is an option tag inside it.</td>
+          <td class="ex">
+            <div class="demo">
+              <label for="fruit">Favourite fruit</label>
+              <select id="fruit">
+                <option>Mango</option>
+                <option>Jackfruit</option>
+                <option>Lychee</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-textarea" data-k="multi line text box message">
+          <th scope="row"><a class="tag" href="#tag-textarea"><span class="b">&lt;</span>textarea<span class="b">&gt;</span></a></th>
+          <td class="desc">A text box for several lines of text, like a message or a comment.</td>
+          <td class="ex">
+            <div class="demo">
+              <label for="about-me">Describe yourself</label><br>
+              <textarea id="about-me" rows="4" cols="36"></textarea>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Interactive ============ -->
+      <tbody id="interactive" data-group="Interactive">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Interactive <span class="group-count"></span></th></tr>
+
+        <tr id="tag-details" data-k="accordion toggle collapse expand">
+          <th scope="row"><a class="tag" href="#tag-details"><span class="b">&lt;</span>details<span class="b">&gt;</span></a></th>
+          <td class="desc">A box that opens and closes when you click it. No JavaScript needed.</td>
+          <td class="ex">
+            <div class="demo">
+              <details>
+                <summary>What does HTML stand for?</summary>
+                <p>HyperText Markup Language.</p>
+              </details>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-summary" data-k="details heading toggle">
+          <th scope="row"><a class="tag" href="#tag-summary"><span class="b">&lt;</span>summary<span class="b">&gt;</span></a></th>
+          <td class="desc">The always-visible label of a details box. Clicking it opens or closes the box.</td>
+          <td class="ex">
+            <div class="demo">
+              <details open>
+                <summary>Click here to close me</summary>
+                <p>The summary is the part you click.</p>
+              </details>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-dialog" data-k="modal popup window">
+          <th scope="row"><a class="tag" href="#tag-dialog"><span class="b">&lt;</span>dialog<span class="b">&gt;</span></a></th>
+          <td class="desc">A pop-up box that appears on top of the page. A form with method="dialog" closes it.</td>
+          <td class="ex">
+            <div class="demo">
+              <button type="button" id="open-dialog">Open the dialog</button>
+              <dialog id="hello-dialog">
+                <p>Hello! I am a dialog box.</p>
+                <form method="dialog">
+                  <button type="submit">Close</button>
+                </form>
+              </dialog>
+              <script>
+                document.getElementById("open-dialog").addEventListener("click", function () {
+                  document.getElementById("hello-dialog").showModal();
+                });
+              </script>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- ============ Scripting ============ -->
+      <tbody id="scripting" data-group="Scripting">
+        <tr class="group-row"><th colspan="3" scope="rowgroup">Scripting <span class="group-count"></span></th></tr>
+
+        <tr id="tag-script" data-k="javascript js code">
+          <th scope="row"><a class="tag" href="#tag-script"><span class="b">&lt;</span>script<span class="b">&gt;</span></a></th>
+          <td class="desc">Adds JavaScript to the page. Here it waits for a click, then writes a message.</td>
+          <td class="ex">
+            <div class="demo">
+              <button type="button" id="hello-btn">Say hello</button>
+              <p id="hello-out"></p>
+              <script>
+                document.getElementById("hello-btn").addEventListener("click", function () {
+                  var time = new Date().toLocaleTimeString();
+                  document.getElementById("hello-out").textContent = "Hello from JavaScript! The time is " + time + ".";
+                });
+              </script>
+            </div>
+          </td>
+        </tr>
+
+        <tr id="tag-canvas" data-k="draw graphics javascript">
+          <th scope="row"><a class="tag" href="#tag-canvas"><span class="b">&lt;</span>canvas<span class="b">&gt;</span></a></th>
+          <td class="desc">A blank drawing area. JavaScript draws shapes, charts or games on it.</td>
+          <td class="ex">
+            <div class="demo">
+              <canvas id="sketch" width="240" height="120">A blue square and a lavender circle.</canvas>
+              <script>
+                var ctx = document.getElementById("sketch").getContext("2d");
+                ctx.fillStyle = "#72a4d0";
+                ctx.fillRect(20, 20, 80, 80);
+                ctx.fillStyle = "#b9a8fe";
+                ctx.beginPath();
+                ctx.arc(170, 60, 40, 0, Math.PI * 2);
+                ctx.fill();
+              </script>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="empty" id="empty" hidden></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="https://github.com/Hasanahammad">Hasan Ahammad</a>. First built in 2017 while learning HTML, updated in 2026.</p>
+      <p>Want more detail on any tag? See the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN HTML element reference</a>.</p>
+      <p><a href="https://github.com/Hasanahammad/html_Tags">Source code on GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ---------- "Show code" for every live example ----------
+      var BOOLEAN_ATTRS = /\s(controls|open|disabled|checked|selected|required|readonly|multiple|autoplay|muted|loop|reversed|defer|async|novalidate)=""/g;
+
+      function dedent(text) {
+        var lines = text.replace(/\t/g, "  ").split("\n");
+        while (lines.length && !lines[0].trim()) lines.shift();
+        while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
+        var indent = Infinity;
+        lines.forEach(function (line) {
+          if (line.trim()) indent = Math.min(indent, line.match(/^ */)[0].length);
+        });
+        if (!isFinite(indent)) indent = 0;
+        return lines.map(function (line) { return line.slice(indent); }).join("\n");
+      }
+
+      document.querySelectorAll(".demo").forEach(function (demo, i) {
+        var source = dedent(demo.innerHTML).replace(BOOLEAN_ATTRS, " $1");
+
+        var tools = document.createElement("div");
+        tools.className = "ex-tools";
+
+        var toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "btn";
+        toggle.textContent = "Show code";
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-controls", "code-" + i);
+
+        var copy = document.createElement("button");
+        copy.type = "button";
+        copy.className = "btn";
+        copy.textContent = "Copy code";
+        copy.hidden = true;
+
+        var pre = document.createElement("pre");
+        pre.className = "code";
+        pre.id = "code-" + i;
+        pre.hidden = true;
+        var code = document.createElement("code");
+        code.textContent = source;
+        pre.appendChild(code);
+
+        tools.append(toggle, copy);
+        demo.after(tools, pre);
+
+        toggle.addEventListener("click", function () {
+          var opening = pre.hidden;
+          pre.hidden = !opening;
+          copy.hidden = !opening;
+          toggle.setAttribute("aria-expanded", String(opening));
+          toggle.textContent = opening ? "Hide code" : "Show code";
+        });
+
+        copy.addEventListener("click", function () {
+          function done(label) {
+            copy.textContent = label;
+            setTimeout(function () { copy.textContent = "Copy code"; }, 1600);
+          }
+          function selectCode() {
+            var range = document.createRange();
+            range.selectNodeContents(code);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            done("Selected");
+          }
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(source).then(function () { done("Copied"); }, selectCode);
+          } else {
+            selectCode();
+          }
+        });
+      });
+
+      // The form demo shows a message instead of leaving the page
+      document.querySelectorAll('.demo form:not([method="dialog"])').forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var message = form.parentNode.querySelector(".form-message");
+          if (!message) {
+            message = document.createElement("p");
+            message.className = "form-message";
+            form.after(message);
+          }
+          message.textContent = "Form sent. (This demo doesn't send your data anywhere.)";
+        });
+      });
+
+      // ---------- Search and group filter ----------
+      var search = document.getElementById("q");
+      var groupSelect = document.getElementById("group");
+      var count = document.getElementById("count");
+      var empty = document.getElementById("empty");
+      var groups = Array.prototype.slice.call(document.querySelectorAll(".tags > tbody"));
+      var total = 0;
+
+      function clean(text) {
+        return text.toLowerCase().replace(/[<>\/–]/g, " ").replace(/\s+/g, " ").trim();
+      }
+
+      groups.forEach(function (group) {
+        var rows = group.querySelectorAll(":scope > tr:not(.group-row)");
+        total += rows.length;
+        group.querySelector(".group-count").textContent = rows.length + (rows.length === 1 ? " tag" : " tags");
+        groupSelect.add(new Option(group.dataset.group, group.id));
+        rows.forEach(function (row) {
+          row.searchText = clean(
+            row.querySelector(".tag").textContent + " " +
+            (row.dataset.k || "") + " " +
+            row.querySelector(".desc").textContent
+          );
+        });
+      });
+
+      function applyFilter() {
+        var term = clean(search.value);
+        var chosen = groupSelect.value;
+        var shown = 0;
+
+        groups.forEach(function (group) {
+          if (chosen && group.id !== chosen) {
+            group.hidden = true;
+            return;
+          }
+          var visible = 0;
+          group.querySelectorAll(":scope > tr:not(.group-row)").forEach(function (row) {
+            var match = !term || row.searchText.indexOf(term) !== -1;
+            row.hidden = !match;
+            if (match) visible++;
+          });
+          group.hidden = visible === 0;
+          shown += visible;
+        });
+
+        count.textContent = shown === total
+          ? "Showing all " + total + " tags"
+          : "Showing " + shown + " of " + total + " tags";
+
+        empty.hidden = shown !== 0;
+        if (shown === 0) {
+          empty.textContent = chosen
+            ? "No tag in this group matches “" + search.value.trim() + "”. Choose “All groups” or try another word."
+            : "No tag matches “" + search.value.trim() + "”. Check the spelling or try another word, like img or table.";
+        }
+      }
+
+      search.addEventListener("input", applyFilter);
+      groupSelect.addEventListener("change", applyFilter);
+      applyFilter();
+
+      // Press "/" anywhere to jump to the search box
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "/" || event.ctrlKey || event.metaKey || event.altKey) return;
+        if (event.target.closest && event.target.closest("input, textarea, select, [contenteditable]")) return;
+        event.preventDefault();
+        search.focus();
+      });
+
+      // Keep jump links from hiding under the sticky search bar
+      var toolbar = document.querySelector(".toolbar");
+      function setScrollPadding() {
+        document.documentElement.style.scrollPaddingTop = (toolbar.offsetHeight + 16) + "px";
+      }
+      setScrollPadding();
+      window.addEventListener("resize", setScrollPadding);
+      if (location.hash) {
+        var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (target) target.scrollIntoView();
+      }
+    })();
+  </script>
 </body>
-
 </html>
